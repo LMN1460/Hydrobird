@@ -1,0 +1,7 @@
+# This is an example instruction set!
+# Any lines preceded by a '#' symbol will be ignored when loading an instruction set.
+# Write your instructions in the format [time] [device] [action].
+# Put each instruction on a new line, with each part of the instruction seperated by a single space character.
+# Available devices: pump (actions: on, off)
+2:30 pump on
+2:45 pump off

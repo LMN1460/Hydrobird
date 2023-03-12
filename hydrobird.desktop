@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Hydrobird
+Comment=Shortcut for the Hydrobird hydroponics system controller
+Exec=/home/Shared/OMS_Hydroponics/run.sh
+Type=Application
+Terminal=true
