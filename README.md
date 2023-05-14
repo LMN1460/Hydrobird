@@ -4,15 +4,15 @@ Repository for the Hydrobird hydroponics system controller and associated files.
 
 **DISCLAIMER:** This code was developed for use on a Raspberry Pi running the Rasberry Pi OS. Therefore, this code structure assumes a Linux-based system, and any attempts to run this on a non-Linux system cannot be guaranteed to work.
 
-## Installation
+## Console Program Installation
 
 In it's current state, this code cannot be easily deployed through the command line; you must manually set up the file structure. Do so in the following manner:
 
-* Create a single folder to store all of Hydrobird's files in. Copy `hydrobird.py` and `run.sh` to this folder.
+* Create a single folder to store all of Hydrobird's files in. Copy `hydrobird_terminal.py` and `run.sh` to this folder.
 * Create a file `instrux.txt` containing your desired instruction set, following the format described in the example `instrux.txt` file. Save this in the folder.
-* Modify the `path` variable in the third line of `hydrobird.py` to point to the folder's location.
-* Modify the filepath stated in `run.sh` to point to `hydrobird.py`. Make sure`run.sh` has execute permissions; use `chmod +x run.sh` if neccesary.
-* Copy `hydrobird.desktop` to the desktop. This shortcut will run `run.sh`, which will launch `hydrobird.py`.
+* Modify the `path` variable in the third line of `hydrobird_terminal.py` to point to the folder's location.
+* Modify the filepath stated in `run.sh` to point to `hydrobird_terminal.py`. Make sure`run.sh` has execute permissions; use `chmod +x run.sh` if neccesary.
+* Copy `hydrobird.desktop` to the desktop. This shortcut will run `run.sh`, which will launch `hydrobird_terminal.py`.
 * Modify user and file permissions as necessary.
 
 Hydrobird is hardcoded to interact with the Phidgets family of sensors, specifically the Power Plug Phidget (PSU1000_0) and the pH Sensor Phidget (ADP1000_0). This also necessitates the use of the  Hub Phidget (HUB0001_0) that the power plug and pH sensor will be plugged into. Connect the smart plug to port 0 and the pH sensor to port 1 of the hub. You may plug the hub into any USB-A port of the host computer.
@@ -45,6 +45,10 @@ While Hydrobird is running, you may run any of these commands:
 *  `check` to check devices for operability and reopen any closed channels.
 * `pumpon` or `pumpoff` to manually turn on or off the pump (power plug).
 * `about` to view the about page.
+
+## Customization
+
+If you want to use the Hydrobird functions in your own implementation (say, a Flask app), copy the functions located in the `hydrobird_core.py` file. Not sure if they'll work as direct imports yet, but that'll be updated soon.
 
 ## Contribute
 
