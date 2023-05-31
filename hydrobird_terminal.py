@@ -1,5 +1,5 @@
 # Version number
-ver = "1.1.0"
+ver = "1.1.1"
 path = "/home/Shared/OMS_Hydroponics/"
 
 # Import Phidgets libraries
@@ -217,7 +217,8 @@ def update():
 
 # Recheck/connect devices
 def check():
-    devCheck()
+    deviceCall()
+    print() # newline
     
 # Turn pump on
 def pumpon():
