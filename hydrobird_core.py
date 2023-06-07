@@ -1,5 +1,5 @@
 # Version number
-ver = "1.1.0"
+ver = "1.2.0"
 path = "/home/Shared/OMS_Hydroponics/"
 
 # Import Phidgets libraries
@@ -97,7 +97,7 @@ def timing():
 
 
 # Take pH readings
-def ph(record, phLoc = path + "readings.csv"):
+def takePH(record, phLoc = path + "readings.csv"):
     if record == True: # if user chooses to log readings
         phPath = Path(phLoc) # convert string to Path object
         if phPath.is_file() == True: # only check for write access if is an already existent file
